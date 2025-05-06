@@ -11,8 +11,8 @@ import { AuthService } from 'src/app/services/auth.service';
 export class NavComponent implements OnInit {
 
   constructor(private router: Router,
-              private authService: AuthService,
-              private toast: ToastrService) { }
+    private authService: AuthService,
+    private toast: ToastrService) { }
 
   ngOnInit(): void {
     this.router.navigate(['chamados'])
@@ -21,6 +21,6 @@ export class NavComponent implements OnInit {
   logout() {
     this.router.navigate(['login'])
     this.authService.logout()
-    this.toast.info('Logout realizado com sucesso', 'Logout', {timeOut: 7000})
+    this.toast.info('Logout realizado com sucesso', 'Logout', { timeOut: 7000 })
   }
 }
